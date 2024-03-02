@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const apiStatus = $('div#api_status');
 
-  $.ajax('http://0.0.0.0:5001/api/v1/status').done(function (data) {
-    if (data.status === 'OK') {
+  $.ajax('http://0.0.0.0:5001/api/v1/status').done(function (response) {
+    if (response.status === 'OK') {
       apiStatus.addClass('available');
     } else {
       apiStatus.removeClass('available');
